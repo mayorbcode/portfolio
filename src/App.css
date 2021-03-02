@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* Resets */
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  background: black;
+  background-image: url(./images/space1.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navigation */
+.nav {
   display: flex;
-  flex-direction: column;
+  /* background: grey; */
+  border-bottom: 1px solid white;
+  height: 60px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 20px;
+  gap: 20px;
+}
+
+.nav a {
+  font-size: 2rem;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav a:hover {
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav a:nth-child(2) {
+  margin-left: auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .top {
+  display: flex;
+  margin: 25px 50px;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .top h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+}
+
+.home .top h1 {
+  text-shadow: 1px 1px 1px black;
+}
+
+.home .top h1 div:first-child {
+  font-size: 3rem;
+  position: relative;
+  bottom: 60px;
+  right: 100px;
+}
+
+.home .top h1 div:nth-child(2) {
+  font-size: 7rem;
+}
+
+.home .top h1 div:nth-child(3) {
+  font-size: 3rem;
+  position: relative;
+  top: 60px;
+  left: 750px;
+}
+
+.home .top h1:hover {
+  /* transform: scale(1.2); */
+  cursor: pointer;
+}
+
+.home img {
+  position: absolute;
+  z-index: 0;
+  height: 480px;
+  width: 480px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.home img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.home .bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.home .bottom a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.5s;
+}
+
+.home .bottom a:hover {
+  transform: scale(1.1);
 }
