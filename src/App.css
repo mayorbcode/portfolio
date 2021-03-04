@@ -13,6 +13,7 @@ html, body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* Navigation */
@@ -63,28 +64,28 @@ html, body {
 
 .home .top h1 {
   text-shadow: 1px 1px 1px black;
+  text-align: center;
 }
 
 .home .top h1 div:first-child {
-  font-size: 3rem;
+  font-size: 3.5vw;
   position: relative;
-  bottom: 60px;
-  right: 100px;
+  bottom: 50px;
+  right: 35vw;
 }
 
 .home .top h1 div:nth-child(2) {
-  font-size: 7rem;
+  font-size: 8vw;
 }
 
 .home .top h1 div:nth-child(3) {
-  font-size: 3rem;
+  font-size: 3.5vw;
   position: relative;
-  top: 60px;
-  left: 750px;
+  top: 50px;
+  left: 35vw;
 }
 
 .home .top h1:hover {
-  /* transform: scale(1.2); */
   cursor: pointer;
 }
 
@@ -95,12 +96,10 @@ html, body {
   width: 480px;
   border-radius: 50%;
   object-fit: cover;
-  transition: transform 0.5s;
 }
 
 .home img:hover {
   cursor: pointer;
-  transform: scale(1.1);
 }
 
 .home .bottom {
@@ -116,5 +115,134 @@ html, body {
 }
 
 .home .bottom a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
+
+.svg {
+  /* border: 2px solid white; */
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  background-image: url('./images/Rocket11.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Page Transitions */
+
+/* Home page */
+
+/* Whole page */
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 0.6s;
+  transition-delay: 0.6s;
+}
+
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+/* Rocket */
+.page-enter .svg {
+  transform: translateY(200px) !important;
+}
+.page-enter-active .svg {
+  transform: translateY(0) !important;
+  transition: transform 0.4s;
+  transition-delay: 0.5s;
+}
+
+.page-exit .svg {
+  transform: translateY(0) !important;
+}
+.page-exit-active .svg {
+  transform: translateY(-500px) !important;
+  transition: transform 0.4s;
+  transition-delay: 0;
+}
+
+/* Upper Text (Hi there) */
+.page-enter .top div:first-child {
+  transform: translateX(200px)
+}
+.page-enter-active .top div:first-child {
+  transform: translateX(0) !important;
+  transition: transform 0.4s;
+  transition-delay: 0.5s;
+}
+.page-exit .top div:first-child {
+  transform: translateX(0) !important;
+}
+.page-exit-active .top div:first-child {
+  transform: translateX(300px) !important;
+  transition: transform 0.4s;
+  transition-delay: 0;
+}
+/* Middle Text (Name) & Selfie & bottom text*/
+.page-enter .top div:nth-child(2), .page-enter .selfie, .page-enter .bottom a {
+  transform: scale(0);
+}
+.page-enter-active .top div:nth-child(2), .page-enter-active .selfie, .page-enter-active .bottom a {
+  transform: scale(1) !important;
+  transition: transform 0.4s;
+  transition-delay: 0.5s;
+}
+.page-exit .top div:nth-child(2), .page-exit .selfie, .page-exit .bottom a {
+  transform: scale(1) !important;
+}
+.page-exit-active .top div:nth-child(2), .page-exit-active .selfie, .page-exit-active .bottom a {
+  transform: scale(0) !important;
+  transition: transform 0.4s;
+  transition-delay: 0;
+}
+
+/* Lower Text (Developer) */
+.page-enter .top div:last-child {
+  transform: translateX(-200px);
+}
+.page-enter-active .top div:last-child {
+  transform: translateX(0) !important;
+  transition: transform 0.4s;
+  transition-delay: 0.5s;
+}
+.page-exit .top div:last-child {
+  transform: translateX(0) !important;
+}
+.page-exit-active .top div:last-child {
+  transform: translateX(-300px) !important;
+  transition: transform 0.4s;
+  transition-delay: 0;
+}
+
+/* Media querries */
+
+@media (max-width: 775px) {
+  .home .top h1 div:first-child {
+    font-size: 2rem;
+    bottom: 150px;
+  }
+  .home .top h1 div:nth-child(3) {
+    font-size: 2rem;
+    top: 150px;
+  }
+}
+
+@media (max-width: 525px) {
+  .home .top .selfie {
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+}
+
+

@@ -14,4 +14,4 @@ Images from [Unsplash](https://unsplash.com/)
 - Contact page
 - Styling tweaks  
 - Responsiveness  
-- Gsap animations
+- Gsap animations  

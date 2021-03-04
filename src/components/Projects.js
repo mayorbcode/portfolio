@@ -1,12 +1,6 @@
-import React, { useEffect } from 'react';
-import { usePageContext } from '../store/PageContext';
+import React from 'react';
 
 const Projects = () => {
-  const { handleCurrentPage } = usePageContext();
-  useEffect(() => {
-    handleCurrentPage('projects');
-  }, [handleCurrentPage]);
-
   return (
     <div className="projects">
       Projects

@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
-import { usePageContext } from '../store/PageContext';
+import React from 'react';
 
 const Contact = () => {
-  const { handleCurrentPage } = usePageContext();
-  useEffect(() => {
-    handleCurrentPage('contact');
-  }, [handleCurrentPage]);
 
   return (
     <div className="contact">
