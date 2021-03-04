@@ -226,11 +226,22 @@ html, body {
 }
 
 /* Media querries */
+@media (max-width: 850px) {
+  .home .top h1 div:first-child {
+    bottom: 100px;
+  }
+  .home .top h1 div:nth-child(3) {
+    top: 100px;
+  }
+}
 
 @media (max-width: 775px) {
   .home .top h1 div:first-child {
     font-size: 2rem;
     bottom: 150px;
+  }
+  .home .top h1 div:nth-child(2) {
+    font-size: 60px;
   }
   .home .top h1 div:nth-child(3) {
     font-size: 2rem;
@@ -238,10 +249,33 @@ html, body {
   }
 }
 
+@media (max-width: 670px) {
+  .home .top h1 div:first-child {
+    bottom: 170px;
+  }
+  .home .top h1 div:nth-child(3) {
+    top: 170px;
+  }
+}
+
 @media (max-width: 525px) {
   .home .top .selfie {
-    max-width: 90vw;
-    max-height: 90vw;
+    width: 90vw;
+    height: 90vw;
+  }
+}
+
+@media (max-width: 495px) {
+  .home .top h1 div:first-child {
+    right: 0vw;
+    bottom: 30vw;
+  }
+  .home .top h1 div:nth-child(2) {
+    text-shadow: 3px 3px 3px black;
+  }
+  .home .top h1 div:nth-child(3) {
+    left: 0vw;
+    top: 30vw;
   }
 }
 
