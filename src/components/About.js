@@ -15,6 +15,12 @@ const About = () => {
   }
   return (
     <div className="about">
+      <div className="top">
+        <div className="text">
+          <h1>I'm passionate about programming, working out and food (yes, food).</h1>
+          <p>Here are a few tools i'm fairly competent at using:</p>
+        </div>
+      </div>
       <div className="bottom">
         <Link onMouseEnter={() => scaleItem('.bottom a', 1.2, 0.25)} onMouseLeave={() => scaleItem('.bottom a', 1, 0.25)} to='/projects'>View some of my work!</Link>
         <div className="svg">

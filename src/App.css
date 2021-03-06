@@ -89,10 +89,6 @@ html, body {
   left: 35vw;
 }
 
-.home .top h1:hover {
-  cursor: pointer;
-}
-
 .home img {
   position: absolute;
   z-index: 0;
@@ -100,10 +96,6 @@ html, body {
   width: 480px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.home img:hover {
-  cursor: pointer;
 }
 
 .home .bottom {
@@ -115,11 +107,17 @@ html, body {
   text-decoration: none;
   font-size: 2rem;
   color: white;
-  transition: transform 0.5s;
+  margin-top: -15px;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 7px 15px;
+  transition: transform 0.5s, color 0.65s, background-color 0.65s;
 }
 
 .home .bottom a:hover {
   transform: scale(1.2);
+  color: black;
+  background-color: white;
 }
 
 .svg {
@@ -132,7 +130,6 @@ html, body {
   background-image: url('./images/Rocket11.svg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 
 /* Page Transitions */
