@@ -14,15 +14,26 @@ html, body {
   background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+  /* height: 100%; */
 }
 
 /* Navigation */
 .nav {
+  position: static;
   display: flex;
   /* background: grey; */
   border-bottom: 1px solid white;
-  height: 60px;
   align-items: center;
+  padding: 15px 0;
   margin: 0 20px;
   gap: 20px;
 }
@@ -132,18 +143,101 @@ html, body {
   background-repeat: no-repeat;
 }
 
+/* About Page */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 6vh;
+}
+
+.about .top .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about .top .text h1 {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.about .top .text p {
+  color: white;
+  text-align: center;
+}
+
+.about .middle {
+  margin-top: -2rem;
+}
+.about .middle p {
+  color: white;
+  text-align: center;
+}
+
+.about .middle .tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.about .middle .logos {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about .bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.about .bottom a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: transform 0.05s 0s, color 0.65s, background-color 0.65s;
+  transition-delay: 0;
+  /* transition: all 0.5s 0; */
+}
+
+.about .bottom a:hover {
+  transform: scale(1.2);
+  color: black;
+  background-color: white;
+}
+
+.about .top p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 /* Page Transitions */
 
 /* Home page */
 
 /* Whole page */
 .page-enter {
+  margin: auto;
   opacity: 0;
 }
 .page-enter-active {
+  margin: auto;
   opacity: 1;
-  transition: opacity 0.6s;
-  transition-delay: 0.6s;
+  transition: opacity 0.6s 0.6s;
+  /* transition-delay: 0.6s; */
+}
+
+.page-enter-done {
+  margin: auto;
 }
 
 .page-exit {
@@ -174,59 +268,83 @@ html, body {
 }
 
 /* Upper Text (Hi there) */
-.page-enter .top div:first-child {
+.page-enter .home .top div:first-child {
   transform: translateX(200px)
 }
-.page-enter-active .top div:first-child {
+.page-enter-active .home .top div:first-child {
   transform: translateX(0) !important;
   transition: transform 0.4s;
   transition-delay: 0.5s;
 }
-.page-exit .top div:first-child {
+.page-exit .home .top div:first-child {
   transform: translateX(0) !important;
 }
-.page-exit-active .top div:first-child {
+.page-exit-active .home .top div:first-child {
   transform: translateX(300px) !important;
   transition: transform 0.4s;
   transition-delay: 0;
 }
 /* Middle Text (Name) & Selfie & bottom text*/
-.page-enter .top div:nth-child(2), .page-enter .selfie, .page-enter .bottom a {
+.page-enter .home .top div:nth-child(2), .page-enter .selfie, .page-enter .bottom a {
   transform: scale(0);
 }
-.page-enter-active .top div:nth-child(2), .page-enter-active .selfie, .page-enter-active .bottom a {
+.page-enter-active .home .top div:nth-child(2), .page-enter-active .selfie, .page-enter-active .bottom a {
   transform: scale(1) !important;
   transition: transform 0.4s;
   transition-delay: 0.5s;
 }
-.page-exit .top div:nth-child(2), .page-exit .selfie, .page-exit .bottom a {
+.page-exit .home .top div:nth-child(2), .page-exit .selfie, .page-exit .bottom a {
   transform: scale(1) !important;
 }
-.page-exit-active .top div:nth-child(2), .page-exit-active .selfie, .page-exit-active .bottom a {
+.page-exit-active .home .top div:nth-child(2), .page-exit-active .selfie, .page-exit-active .bottom a {
   transform: scale(0) !important;
   transition: transform 0.4s;
   transition-delay: 0;
 }
 
 /* Lower Text (Developer) */
-.page-enter .top div:last-child {
+.page-enter .home .top div:last-child {
   transform: translateX(-200px);
 }
-.page-enter-active .top div:last-child {
+.page-enter-active .home .top div:last-child {
   transform: translateX(0) !important;
   transition: transform 0.4s;
   transition-delay: 0.5s;
 }
-.page-exit .top div:last-child {
+.page-exit .home .top div:last-child {
   transform: translateX(0) !important;
 }
-.page-exit-active .top div:last-child {
+.page-exit-active .home .top div:last-child {
   transform: translateX(-300px) !important;
   transition: transform 0.4s;
   transition-delay: 0;
 }
 
+
+/* About page exit and enter css transitions */
+.page-enter .about .top .text{
+  opacity: 0;
+}
+.page-enter-active .about .top .text{
+  opacity: 1;
+  transition: opacity 0.6s;
+  transition-delay: 0.6s;
+}
+
+.page-exit .about .top .text{
+  opacity: 1;
+}
+.page-exit-active .about .top .text{
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
 /* Media querries */
+@media (min-height: 900px) {
+  .about {
+    gap: 9vh;
+  }
+}
 @media (max-width: 850px) {
   .home .top h1 div:first-child {
     bottom: 100px;

@@ -30,12 +30,12 @@ const App = () => {
                       <CSSTransition
                         in={match != null}
                         unmountOnExit
-                        timeout={1200}
+                        timeout={1500}
                         classNames='page'
                       >
-                        {/* <div className="page"> */}
+                        <div className="page">
                           <Component />
-                        {/* </div> */}
+                        </div>
                       </CSSTransition>)}
                   </Route>
                 )}
