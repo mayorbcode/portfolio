@@ -29,11 +29,12 @@ const App = () => {
                     {({match}) => (
                       <CSSTransition
                         in={match != null}
-                        unmountOnExit
-                        timeout={1500}
+                        timeout={2000}
                         classNames='page'
+                        unmountOnExit
+                        appear
                       >
-                        <div className="page">
+                        <div className="component">
                           <Component />
                         </div>
                       </CSSTransition>)}

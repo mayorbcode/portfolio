@@ -19,13 +19,6 @@ html, body {
   /* justify-content: center; */
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  /* margin: auto; */
-  /* height: 100%; */
-}
-
 /* Navigation */
 .nav {
   position: static;
@@ -118,7 +111,7 @@ html, body {
   text-decoration: none;
   font-size: 2rem;
   color: white;
-  margin-top: -15px;
+  margin-top: -25px;
   border: 2px solid white;
   border-radius: 15px;
   padding: 7px 15px;
@@ -225,19 +218,24 @@ html, body {
 /* Home page */
 
 /* Whole page */
+
+.component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .page-enter {
-  margin: auto;
   opacity: 0;
 }
+
 .page-enter-active {
-  margin: auto;
   opacity: 1;
-  transition: opacity 0.6s 0.6s;
-  /* transition-delay: 0.6s; */
+  transition: opacity 0.6s;
+  transition-delay: 0.6s;
 }
 
 .page-enter-done {
-  margin: auto;
 }
 
 .page-exit {
@@ -249,7 +247,7 @@ html, body {
 }
 
 /* Rocket */
-.page-enter .svg {
+/* .page-enter .svg {
   transform: translateY(200px) !important;
 }
 .page-enter-active .svg {
@@ -265,16 +263,16 @@ html, body {
   transform: translateY(-500px) !important;
   transition: transform 0.4s;
   transition-delay: 0;
-}
+} */
 
 /* Upper Text (Hi there) */
-.page-enter .home .top div:first-child {
+/* .page-enter .home .top div:first-child {
   transform: translateX(200px)
 }
 .page-enter-active .home .top div:first-child {
   transform: translateX(0) !important;
   transition: transform 0.4s;
-  transition-delay: 0.5s;
+  transition-delay: 0.6s;
 }
 .page-exit .home .top div:first-child {
   transform: translateX(0) !important;
@@ -283,15 +281,15 @@ html, body {
   transform: translateX(300px) !important;
   transition: transform 0.4s;
   transition-delay: 0;
-}
+} */
 /* Middle Text (Name) & Selfie & bottom text*/
-.page-enter .home .top div:nth-child(2), .page-enter .selfie, .page-enter .bottom a {
+/* .page-enter .home .top div:nth-child(2), .page-enter .selfie, .page-enter .bottom a {
   transform: scale(0);
 }
 .page-enter-active .home .top div:nth-child(2), .page-enter-active .selfie, .page-enter-active .bottom a {
   transform: scale(1) !important;
   transition: transform 0.4s;
-  transition-delay: 0.5s;
+  transition-delay: 0.6s;
 }
 .page-exit .home .top div:nth-child(2), .page-exit .selfie, .page-exit .bottom a {
   transform: scale(1) !important;
@@ -299,17 +297,17 @@ html, body {
 .page-exit-active .home .top div:nth-child(2), .page-exit-active .selfie, .page-exit-active .bottom a {
   transform: scale(0) !important;
   transition: transform 0.4s;
-  transition-delay: 0;
-}
+  transition-delay: 0s;
+} */
 
 /* Lower Text (Developer) */
-.page-enter .home .top div:last-child {
+/* .page-enter .home .top div:last-child {
   transform: translateX(-200px);
 }
 .page-enter-active .home .top div:last-child {
   transform: translateX(0) !important;
   transition: transform 0.4s;
-  transition-delay: 0.5s;
+  transition-delay: 0.6s;
 }
 .page-exit .home .top div:last-child {
   transform: translateX(0) !important;
@@ -317,27 +315,27 @@ html, body {
 .page-exit-active .home .top div:last-child {
   transform: translateX(-300px) !important;
   transition: transform 0.4s;
-  transition-delay: 0;
-}
+  transition-delay: 0s;
+} */
 
 
 /* About page exit and enter css transitions */
-.page-enter .about .top .text{
+/* .page-enter .about {
   opacity: 0;
 }
-.page-enter-active .about .top .text{
+.page-enter-active .about {
   opacity: 1;
   transition: opacity 0.6s;
   transition-delay: 0.6s;
 }
 
-.page-exit .about .top .text{
+.page-exit .about {
   opacity: 1;
 }
-.page-exit-active .about .top .text{
+.page-exit-active .about {
   opacity: 0;
   transition: opacity 0.4s;
-}
+} */
 
 /* Media querries */
 @media (min-height: 900px) {
