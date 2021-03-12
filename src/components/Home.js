@@ -1,19 +1,17 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect} from 'react';
 import me from '../images/selfie.jpg';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 const animation = gsap.timeline();
 
-const Home = () => {
-  const scaleItem = (target, value, time) => {
-    return gsap.to(target, { scale: value , duration: time});
-  }
+const Home = (props) => {
 
   useEffect(() => {
     animation
-      .fromTo('.svg', {bottom:'3%'}, {delay: 2, repeat: -1, ease: 'back', bottom: '10%', yoyo:true, duration: 2})
+      .fromTo('.home .svg', {bottom:'3%'}, {delay: 2, repeat: -1, ease: 'back', bottom: '10%', yoyo:true, duration: 2})
 }, [])
+
   return (
     <div className="home">
       <div className="top">
