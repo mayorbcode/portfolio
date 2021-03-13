@@ -161,7 +161,7 @@ html, body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  min-height: 94vh;
+  min-height: 92vh;
 }
 
 .about .top .text {
@@ -304,7 +304,7 @@ html, body {
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  min-height: 94vh;
+  min-height: 92vh;
 }
 
 .contact .top h1 {
@@ -336,13 +336,6 @@ html, body {
   color: plum;
 }
 
-.contact .middle a img {
-  transition: transform 0.35s;
-}
-
-.contact .middle a img:hover {
-  transform: scale(1.2);
-}
 
 .contact .bottom form {
   display: flex;
@@ -421,7 +414,7 @@ html, body {
 }
 .page-appear-active {
   opacity: 1;
-  transition: opacity 0.8s 1s;
+  transition: opacity 0.6s 0.6s;
 }
 
 .page-enter {
@@ -453,7 +446,7 @@ html, body {
 }
 .page-appear-active .svg {
   transform: translateY(0) !important;
-  transition: transform 0.6s 1.4s;
+  transition: transform 0.6s 0.7s;
 }
 
 .page-enter .svg {
@@ -475,6 +468,16 @@ html, body {
 /* Home page */
 
 /* Upper Text (Hi there) */
+/* appear */
+.page-appear .home .top div:first-child {
+  transform: translateX(200px)
+}
+.page-appear-active .home .top div:first-child {
+  transform: translateX(0) !important;
+  transition: transform 0.6s 0.6s;
+}
+
+/* enter */
 .page-enter .home .top div:first-child {
   transform: translateX(200px)
 }
@@ -482,6 +485,8 @@ html, body {
   transform: translateX(0) !important;
   transition: transform 0.6s 0.6s;
 }
+
+/* exit */
 .page-exit .home .top div:first-child {
   transform: translateX(0) !important;
 }
@@ -492,6 +497,20 @@ html, body {
 } 
 
 /* Middle Text (Name) & Selfie & bottom text*/
+/* appear */
+ .page-appear .home .top div:nth-child(2), 
+ .page-appear .selfie, 
+ .page-appear .bottom a {
+  transform: scale(0);
+}
+.page-appear-active .home .top div:nth-child(2), 
+.page-appear-active .selfie, 
+.page-appear-active .bottom a {
+  transform: scale(1) !important;
+  transition: transform 0.6s 0.6s;
+}
+
+/* enter */
  .page-enter .home .top div:nth-child(2), 
  .page-enter .selfie, 
  .page-enter .bottom a {
@@ -503,6 +522,8 @@ html, body {
   transform: scale(1) !important;
   transition: transform 0.6s 0.6s;
 }
+
+/* exit */
 .page-exit .home .top div:nth-child(2), 
 .page-exit .selfie, 
 .page-exit .bottom a {
@@ -516,6 +537,16 @@ html, body {
 }
 
 /* Lower Text (Developer) */
+/* appear */
+.page-appear .home .top div:last-child {
+  transform: translateX(-200px);
+}
+.page-appear-active .home .top div:last-child {
+  transform: translateX(0) !important;
+  transition: transform 0.6s 0.6s;
+}
+
+/* enter */
 .page-enter .home .top div:last-child {
   transform: translateX(-200px);
 }
@@ -523,6 +554,8 @@ html, body {
   transform: translateX(0) !important;
   transition: transform 0.6s 0.6s;
 }
+
+/* exit */
 .page-exit .home .top div:last-child {
   transform: translateX(0) !important;
 }
@@ -534,6 +567,17 @@ html, body {
 
 /* About page exit and enter css transitions */
 /* top text & middle text*/
+/* appear */
+.page-appear .about .top .text,
+.page-appear .about .middle p {
+  transform: scale(0);
+}
+.page-appear-active .about .top .text,
+.page-appear-active .about .middle p {
+  transform: scale(1);
+  transition: transform 0.6s 0.6s;
+}
+/* enter */
 .page-enter .about .top .text,
 .page-enter .about .middle p {
   transform: scale(0);
@@ -543,6 +587,8 @@ html, body {
   transform: scale(1);
   transition: transform 0.6s 0.6s;
 }
+
+/* exit */
 .page-exit .about .top .text, 
 .page-exit .about .middle p {
   transform: scale(1);
@@ -554,6 +600,17 @@ html, body {
 }
 
 /* logos */
+/* appear */
+.page-appear .about .logos img {
+  transform: translateY(100px);
+}
+.page-appear-active .about .logos img {
+  transform: translateY(0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(.21,.69,.57,1.61);
+}
+
+/* enter */
 .page-enter .about .logos img {
   transform: translateY(100px);
 }
@@ -562,6 +619,8 @@ html, body {
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(.21,.69,.57,1.61);
 }
+
+/* exit */
 .page-exit .about .logos img {
   transform: translateY(0);
 }
@@ -573,6 +632,17 @@ html, body {
 
 /* Projects transitions */
 /* h1 */
+/* appear */
+.page-appear .projects .top h1 {
+  transform: scale(0);
+}
+
+.page-appear-active .projects .top h1 {
+  transform: scale(1);
+  transition: transform 0.6s 0.6s;
+}
+
+/* enter */
 .page-enter .projects .top h1 {
   transform: scale(0);
 }
@@ -581,6 +651,8 @@ html, body {
   transform: scale(1);
   transition: transform 0.6s 0.6s;
 }
+
+/* exit */
 .page-exit .projects .top h1 {
   transform: scale(1);
 }
@@ -590,6 +662,18 @@ html, body {
 }
 
 /* figures */
+/* appear */
+.page-appear .projects .top figure {
+  transform: translateY(100%);
+}
+
+.page-appear-active .projects .top figure {
+  transform: translateY(0);
+  transition: transform 0.6s 0.6s;
+  transition-timing-function: cubic-bezier(.21,.69,.24,1.28);
+}
+
+/* enter */
 .page-enter .projects .top figure {
   transform: translateY(100%);
 }
@@ -599,6 +683,8 @@ html, body {
   transition: transform 0.6s 0.6s;
   transition-timing-function: cubic-bezier(.21,.69,.24,1.28);
 }
+
+/* exit */
 .page-exit .projects .top figure {
   transform: translateY(0);
 }
@@ -609,6 +695,21 @@ html, body {
 
 /* Contact transitions */
 /* h1, p, and form*/
+/* appear */
+.page-appear .contact .top h1,
+.page-appear .contact .middle p,
+.page-appear .contact .bottom form {
+  transform: scale(0);
+}
+
+.page-appear-active .contact .top h1,
+.page-appear-active .contact .middle p,
+.page-appear-active .contact .bottom form {
+  transform: scale(1);
+  transition: transform 0.6s 0.6s;
+}
+
+/* enter */
 .page-enter .contact .top h1,
 .page-enter .contact .middle p,
 .page-enter .contact .bottom form {
@@ -621,6 +722,8 @@ html, body {
   transform: scale(1);
   transition: transform 0.6s 0.6s;
 }
+
+/* exit */
 .page-exit .contact .top h1,
 .page-exit .contact .middle p,
 .page-exit .contact .bottom form {
@@ -635,6 +738,17 @@ html, body {
 
 
 /* logos */
+/* appear */
+.page-appear .contact .middle img {
+  transform: translateY(100px);
+}
+.page-appear-active .contact .middle img {
+  transform: translateY(0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(.21,.69,.57,1.61);
+}
+
+/* enter */
 .page-enter .contact .middle img {
   transform: translateY(100px);
 }
@@ -643,6 +757,8 @@ html, body {
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(.21,.69,.57,1.61);
 }
+
+/* exit */
 .page-exit .contact .middle img {
   transform: translateY(0);
 }
@@ -703,7 +819,7 @@ html, body {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 880px) {
   .nav a {
     display: none;
   }

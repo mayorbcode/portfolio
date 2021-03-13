@@ -24,12 +24,12 @@ const App = () => {
               {routes.map(({ path, name, Component }) => {
                 return (
                   <Route key={name} path={path} exact>
-                    {({ match, location }) => (
+                    {({ match }) => (
                       
                       <CSSTransition
                       in={match != null}
                       timeout={{
-                        appear: 2000,
+                        appear: 1200,
                         enter: 1200,
                         exit: 600,
                       }}

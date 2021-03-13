@@ -9,7 +9,7 @@ const Home = (props) => {
 
   useEffect(() => {
     animation
-      .fromTo('.home .svg', {bottom:'3%'}, {delay: 2, repeat: -1, ease: 'back', bottom: '10%', yoyo:true, duration: 2})
+      .fromTo('.home .svg', {bottom:'3%'}, {delay: 1.2, repeat: -1, ease: 'back', bottom: '10%', yoyo:true, duration: 2})
 }, [])
 
   return (
