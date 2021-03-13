@@ -39,7 +39,6 @@ html, body {
 
 /* Navigation */
 .nav {
-  position: static;
   display: flex;
   border-bottom: 1px solid white;
   align-items: center;
@@ -162,6 +161,7 @@ html, body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+  min-height: 94vh;
 }
 
 .about .top .text {
@@ -304,6 +304,7 @@ html, body {
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  min-height: 94vh;
 }
 
 .contact .top h1 {
@@ -653,6 +654,11 @@ html, body {
 
 /* Media querries */
 @media (min-height: 900px) {
+  .app {
+    height: 100%;
+    min-height: 100vh;
+  }
+  
   .projects .top {
     display: flex;
     flex-direction: column;
@@ -660,35 +666,16 @@ html, body {
 
   .projects .top figure {
     height: 290px;
-    width: 400px;
-    margin: 1rem 10rem;
+    width: 450px;
+    margin: 1rem 5vw;
   }
 
   .projects .bottom a {
     margin-top: -2rem;
   }
 }
-@media (max-width: 1440px) {
-  /* .app {
-    height: 100%;
-    min-height: 100vh;
-  } */
-  /* .projects .top {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .projects .top figure {
-    height: 290px;
-    width: 400px;
-    margin: 1rem 10rem;
-  }
-
-  .projects .bottom a {
-    margin-top: -2rem;
-  } */
-}
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .app {
     height: 100%;
     min-height: 100vh;
@@ -715,6 +702,49 @@ html, body {
     margin-bottom: 4rem;
   }
 }
+
+@media (max-width: 850px) {
+  .nav a {
+    display: none;
+  }
+
+  .nav .hamburger {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    transition: all 0.5s;
+  }
+
+  .nav .hamburger * {
+    transition: all 0.5s;
+  }
+
+  .nav .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .animate {
+    transform: rotate(180deg);
+  }
+  .animate path:nth-child(2) {
+    transform: rotate(45deg);
+    transform-origin: 50%;
+  }
+  .animate path:nth-child(4) {
+    transform: rotate(-45deg);
+    transform-origin: 50%;
+  }
+
+  .animate path:nth-child(1) {
+    opacity: 0;
+  }
+  .animate path:nth-child(3) {
+    opacity: 0;
+  }
+}
+
+
 
 @media (max-width: 775px) {
   .home .top h1 div:first-child {
