@@ -5,7 +5,7 @@ body {
   font-family: 'Josefin Sans', helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, legend {
+h1, h2, h3, h4, h5, h6, legend, button, input, textarea {
   font-family: 'Cardo', helvetica, sans-serif;
 }
 
@@ -160,9 +160,8 @@ html, body {
 .about {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 100%;
-  gap: 6vh;
 }
 
 .about .top .text {
@@ -298,6 +297,117 @@ html, body {
   margin-top: -1rem;
 }
 
+/* Contact Page */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.contact .top h1 {
+  color: white;
+  text-align: center;
+}
+
+.contact .middle {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.contact .middle a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contact .middle a p {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  transition: color 0.35s;
+}
+
+.contact .middle a p:hover {
+  color: plum;
+}
+
+.contact .middle a img {
+  transition: transform 0.35s;
+}
+
+.contact .middle a img:hover {
+  transform: scale(1.2);
+}
+
+.contact .bottom form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  /* border: 1px solid white; */
+  /* padding: 10px; */
+}
+
+.contact .bottom form legend {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact .bottom form p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact .bottom form label {
+  color: white;
+  /* width: 10ch; */
+}
+
+.contact .bottom form input {
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 1.1rem;
+  min-height: 2rem;
+  background: none;
+}
+
+.contact .bottom form textarea {
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 1.1rem;
+  min-height: 5rem;
+  background: none;
+}
+
+.contact .bottom form button {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: relative;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.contact .bottom form button:hover {
+  cursor: pointer;
+  color: plum;
+  border-color: plum;
+}
+
+.contact .bottom button:active {
+  top: 10px;
+}
 
 
 /* Page Transitions */
@@ -381,17 +491,25 @@ html, body {
 } 
 
 /* Middle Text (Name) & Selfie & bottom text*/
- .page-enter .home .top div:nth-child(2), .page-enter .selfie, .page-enter .bottom a {
+ .page-enter .home .top div:nth-child(2), 
+ .page-enter .selfie, 
+ .page-enter .bottom a {
   transform: scale(0);
 }
-.page-enter-active .home .top div:nth-child(2), .page-enter-active .selfie, .page-enter-active .bottom a {
+.page-enter-active .home .top div:nth-child(2), 
+.page-enter-active .selfie, 
+.page-enter-active .bottom a {
   transform: scale(1) !important;
   transition: transform 0.6s 0.6s;
 }
-.page-exit .home .top div:nth-child(2), .page-exit .selfie, .page-exit .bottom a {
+.page-exit .home .top div:nth-child(2), 
+.page-exit .selfie, 
+.page-exit .bottom a {
   transform: scale(1) !important;
 }
-.page-exit-active .home .top div:nth-child(2), .page-exit-active .selfie, .page-exit-active .bottom a {
+.page-exit-active .home .top div:nth-child(2), 
+.page-exit-active .selfie, 
+.page-exit-active .bottom a {
   transform: scale(0) !important;
   transition: transform 0.6s 0s;
 }
@@ -414,39 +532,25 @@ html, body {
 
 
 /* About page exit and enter css transitions */
-/* top text */
-.page-enter .about .top .text {
-  transform: scale(0);
-}
-.page-enter-active .about .top .text {
-  transform: scale(1);
-  transition: transform 0.6s 0.6s;
-}
-.page-exit .about .top .text {
-  transform: scale(1);
-}
-.page-exit-active .about .top .text {
-  transform: scale(0);
-  transition: transform 0.6s;
-}
-
-/* middle text */
+/* top text & middle text*/
+.page-enter .about .top .text,
 .page-enter .about .middle p {
   transform: scale(0);
 }
+.page-enter-active .about .top .text,
 .page-enter-active .about .middle p {
   transform: scale(1);
   transition: transform 0.6s 0.6s;
-  /* transition-delay: 0.6s; */
 }
+.page-exit .about .top .text, 
 .page-exit .about .middle p {
   transform: scale(1);
 }
+.page-exit-active .about .top .text,
 .page-exit-active .about .middle p {
   transform: scale(0);
   transition: transform 0.6s;
 }
-
 
 /* logos */
 .page-enter .about .logos img {
@@ -464,7 +568,6 @@ html, body {
   transform: translateY(100px);
   transition: transform 0.6s;
   transition-delay: 0s !important;
-  /* transition-timing-function: cubic-bezier(.21,.69,.57,1.61); */
 }
 
 /* Projects transitions */
@@ -503,12 +606,53 @@ html, body {
   transition: transform 0.6s;
 }
 
+/* Contact transitions */
+/* h1, p, and form*/
+.page-enter .contact .top h1,
+.page-enter .contact .middle p,
+.page-enter .contact .bottom form {
+  transform: scale(0);
+}
+
+.page-enter-active .contact .top h1,
+.page-enter-active .contact .middle p,
+.page-enter-active .contact .bottom form {
+  transform: scale(1);
+  transition: transform 0.6s 0.6s;
+}
+.page-exit .contact .top h1,
+.page-exit .contact .middle p,
+.page-exit .contact .bottom form {
+  transform: scale(1);
+}
+.page-exit-active .contact .top h1,
+.page-exit-active .contact .middle p,
+.page-exit-active .contact .bottom form {
+  transform: scale(0);
+  transition: transform 0.6s;
+}
+
+
+/* logos */
+.page-enter .contact .middle img {
+  transform: translateY(100px);
+}
+.page-enter-active .contact .middle img {
+  transform: translateY(0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(.21,.69,.57,1.61);
+}
+.page-exit .contact .middle img {
+  transform: translateY(0);
+}
+.page-exit-active .contact .middle img {
+  transform: translateY(100px);
+  transition: transform 0.6s;
+  transition-delay: 0s !important;
+}
+
 /* Media querries */
 @media (min-height: 900px) {
-  .about {
-    gap: 9vh;
-  }
-
   .projects .top {
     display: flex;
     flex-direction: column;
@@ -519,8 +663,31 @@ html, body {
     width: 400px;
     margin: 1rem 10rem;
   }
-}
 
+  .projects .bottom a {
+    margin-top: -2rem;
+  }
+}
+@media (max-width: 1440px) {
+  /* .app {
+    height: 100%;
+    min-height: 100vh;
+  } */
+  /* .projects .top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects .top figure {
+    height: 290px;
+    width: 400px;
+    margin: 1rem 10rem;
+  }
+
+  .projects .bottom a {
+    margin-top: -2rem;
+  } */
+}
 @media (max-width: 860px) {
   .app {
     height: 100%;
@@ -534,7 +701,7 @@ html, body {
     top: 100px;
   }
 
-  .about {
+  .about, .contact {
     min-height: 94vh;
   }
 
