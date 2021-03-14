@@ -19,6 +19,10 @@ export default class MyForm extends React.Component {
       >
         <legend>Contact me!</legend>
         <p>
+          <label htmlFor="name">Your Name:</label>
+          <input type="text" name="name" id="name"/>
+        </p>
+        <p>
           <label htmlFor="email">Your Email:</label>
           <input type="email" name="email" id="email"/>
         </p>
