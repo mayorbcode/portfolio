@@ -24,9 +24,7 @@ html, body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
-  /* width: 100vw; */
-  /* min-height: 100vh; */
-  /* overflow: hidden; */
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -72,6 +70,8 @@ html, body {
   margin-left: auto;
 }
 
+
+/* home page */
 .home {
   display: flex;
   flex-direction: column;
@@ -134,8 +134,10 @@ html, body {
 .home .bottom a {
   text-decoration: none;
   font-size: 2rem;
+  text-align: center;
+  max-width: 90vw;
   color: white;
-  margin-top: -25px;
+  /* margin-top: -25px; */
   border: 2px solid white;
   border-radius: 15px;
   padding: 7px 15px;
@@ -149,8 +151,7 @@ html, body {
 }
 
 .svg {
-  /* border: 2px solid white; */
-  position: absolute;
+  position: fixed;
   bottom: 3%;
   left: 5%;
   width: 100px;
@@ -167,7 +168,7 @@ html, body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  min-height: 91vh;
+  min-height: 90vh;
 }
 
 .about .top .text {
@@ -188,7 +189,9 @@ html, body {
 
 .about .middle {
   margin-top: -2rem;
+  /* max-width: 90vw; */
 }
+
 .about .middle p {
   color: white;
   text-align: center;
@@ -209,6 +212,8 @@ html, body {
   display: flex;
   gap: 3rem;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about .bottom, .projects .bottom {
@@ -226,6 +231,7 @@ html, body {
   padding: 5px 10px;
   transition: transform 0.5s, color 0.65s, background-color 0.65s;
   transition-delay: 0;
+  max-width: 90vw;
 }
 
 .about .bottom a:hover, .projects .bottom a:hover {
@@ -301,6 +307,7 @@ html, body {
 
 .projects .bottom a {
   margin-top: -1rem;
+  margin-bottom: 2rem;
 }
 
 /* Contact Page */
@@ -310,7 +317,7 @@ html, body {
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  min-height: 91vh;
+  min-height: 90vh;
 }
 
 .contact .top h1 {
@@ -322,6 +329,7 @@ html, body {
 .contact .middle {
   display: flex;
   width: 500px;
+  max-width: 90vw;
   justify-content: space-between;
 }
 
@@ -348,8 +356,7 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 300px;
-  /* border: 1px solid white; */
-  /* padding: 10px; */
+  max-width: 80vw;
 }
 
 .contact .bottom form legend {
@@ -368,7 +375,6 @@ html, body {
 
 .contact .bottom form label {
   color: white;
-  /* width: 10ch; */
 }
 
 .contact .bottom form input {
@@ -411,6 +417,24 @@ html, body {
 .contact .bottom button:active {
   top: 10px;
 }
+
+.app .component .top {
+  max-width: 90vw;
+  margin: 10px auto;
+}
+
+.app .component .bottom a {
+  max-width: 70vw;
+}
+
+.app .component .top h1,
+.app .component .top p,
+.app .component .middle h1,
+.app .component .middle p {
+  max-width: 90vw;
+  margin: 10px auto;
+}
+
 
 
 /* Page Transitions */
@@ -800,7 +824,7 @@ html, body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .app {
     height: 100%;
     min-height: 100vh;
@@ -813,8 +837,9 @@ html, body {
     top: 100px;
   }
 
-  .about, .contact {
-    min-height: 94vh;
+  .about, .contact, .home, .projects {
+    height: 100%;
+    margin-bottom: 40px;
   }
 
   .projects .top figure {
@@ -823,8 +848,13 @@ html, body {
     max-width: 92vw;
   }
 
-  .projects .bottom a {
-    margin-bottom: 4rem;
+   .home .bottom a, .about .bottom a {
+    margin-top: 40px;
+  }
+
+  .about .middle .logos {
+    gap: 1rem;
+    max-width: 90vw;
   }
 }
 
@@ -836,7 +866,7 @@ html, body {
     margin-left: auto;
     transition: all 0.5s;
     position: absolute;
-    top: 2vh;
+    top: 20px;
     right: 20px;
     z-index: 100;
   }
@@ -852,31 +882,30 @@ html, body {
   .animate {
     transform: rotate(180deg);
   }
-  .animate path:nth-child(2) {
+
+  .animate .middle1 {
     transform: rotate(45deg);
     transform-origin: 50%;
   }
-  .animate path:nth-child(4) {
+
+  .animate .middle2 {
     transform: rotate(-45deg);
     transform-origin: 50%;
   }
 
-  .animate path:nth-child(1) {
+  .animate .bottom, 
+  .animate .top {
     opacity: 0;
   }
-  .animate path:nth-child(3) {
-    opacity: 0;
-  }
-
 
   .nav {
-    height: 7vh;
+    height: 70px;
     transition: height 0.75s;
   }
 
   .nav-list {
     flex-direction: column;
-    height: 30vh;
+    height: 320px;
     transition-delay: 0.1s;
   }
 
@@ -927,6 +956,14 @@ html, body {
   }
 }
 
+@media (max-width: 550px) {
+  .svg {
+    height: 60px;
+    width: 60px;
+    left: 0px;
+  }
+}
+
 @media (max-width: 525px) {
   .home .top .selfie {
     width: 90vw;
@@ -948,4 +985,15 @@ html, body {
   }
 }
 
+@media (max-width: 400px) {
+  .svg {
+    height: 40px;
+    width: 40px;
+    left: -5px;
+  }
+
+  .app .bottom a {
+    font-size: 1rem;
+  }
+}
 
