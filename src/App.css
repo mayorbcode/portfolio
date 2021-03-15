@@ -848,12 +848,16 @@ html, body {
     max-width: 92vw;
   }
 
-   .home .bottom a, .about .bottom a {
+   .about .bottom a  {
     margin-top: 40px;
   }
 
+  .projects .bottom a {
+    margin-top: 20px;
+  }
+
   .about .middle .logos {
-    gap: 1rem;
+    gap: 2rem;
     max-width: 90vw;
   }
 }
@@ -905,7 +909,7 @@ html, body {
 
   .nav-list {
     flex-direction: column;
-    height: 320px;
+    height: 300px;
     transition-delay: 0.1s;
   }
 
@@ -915,6 +919,7 @@ html, body {
     transition: transform 0.75s, opacity 0.45s;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .nav-list .nav-links {
@@ -927,7 +932,7 @@ html, body {
   }
 
   .nav-links a:nth-child(2) {
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
