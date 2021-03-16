@@ -911,7 +911,7 @@ html, body {
 
   .nav-list {
     flex-direction: column;
-    height: 320px;
+    height: 400px;
     transition-delay: 0.1s;
   }
 
@@ -922,8 +922,8 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* justify-content: space-evenly; */
-    gap: 2rem;
+    justify-content: space-evenly;
+    /* gap: 2rem; */
   }
 
   .nav-list .nav-links {
