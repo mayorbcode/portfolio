@@ -911,7 +911,7 @@ html, body {
 
   .nav-list {
     flex-direction: column;
-    height: 350px;
+    height: 320px;
     transition-delay: 0.1s;
   }
 
@@ -922,7 +922,8 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    gap: 2rem;
   }
 
   .nav-list .nav-links {
@@ -943,26 +944,26 @@ html, body {
 
 @media (max-width: 775px) {
   .home .top h1 div:first-child {
-    font-size: 2rem;
+    font-size: 1.8rem;
     bottom: 135px;
   }
   .home .top h1 div:nth-child(2) {
     font-size: 60px;
   }
   .home .top h1 div:nth-child(3) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     top: 135px;
   }
 }
 
 @media (max-width: 670px) {
   .home .top h1 div:first-child {
-    font-size: 1rem;
+    font-size: 2rem;
     bottom: 130px;
   }
   .home .top h1 div:nth-child(3) {
     top: 130px;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
