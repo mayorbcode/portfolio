@@ -911,7 +911,7 @@ html, body {
 
   .nav-list {
     flex-direction: column;
-    height: 290px;
+    height: 350px;
     transition-delay: 0.1s;
   }
 
