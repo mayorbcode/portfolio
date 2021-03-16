@@ -48,7 +48,6 @@ html, body {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 30px;
 }
 
 .nav .hamburger {
@@ -70,6 +69,9 @@ html, body {
   margin-left: auto;
 }
 
+.nav-links a:nth-child(3) {
+  margin: auto 30px;
+}
 
 /* home page */
 .home {
@@ -212,10 +214,14 @@ html, body {
 
 .about .middle .logos {
   display: flex;
-  gap: 3rem;
+  /* gap: 3rem; */
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.about .logos img {
+  margin: 1.5rem;
 }
 
 .about .bottom, .projects .bottom {
@@ -859,8 +865,11 @@ html, body {
   }
 
   .about .middle .logos {
-    gap: 2rem;
     max-width: 90vw;
+  }
+
+  .about .middle .logos img {
+    margin: 1rem;
   }
 }
 
@@ -911,7 +920,7 @@ html, body {
 
   .nav-list {
     flex-direction: column;
-    height: 400px;
+    height: 380px;
     transition-delay: 0.1s;
   }
 
@@ -922,8 +931,10 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-evenly;
-    /* gap: 2rem; */
+  }
+
+  .app .nav .nav-links a {
+    margin: 20px;
   }
 
   .nav-list .nav-links {
@@ -933,10 +944,6 @@ html, body {
     transform: translateY(30px);
     opacity: 1;
     transition: transform 0.75s, opacity 0.15s;
-  }
-
-  .nav-links a:nth-child(2) {
-    margin: 0 auto;
   }
 }
 
