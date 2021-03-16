@@ -17,7 +17,7 @@ const About = (props) => {
       <div className="top">
         <div className="text">
           <h1>I'm passionate about programming, working out and food (yes, food).</h1>
-          <p>Here are a few tools i'm fairly competent at using:</p>
+          <p>Here are a few tools I'm fairly competent at using:</p>
         </div>
        </div>
         <div className="middle">
