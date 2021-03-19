@@ -8,6 +8,7 @@ const animation = gsap.timeline();
 const Projects = (props) => {
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     animation
       .fromTo('.projects .svg', {bottom:'3%'}, {delay: 1, repeat: -1, ease: 'back', bottom:'10%', yoyo:true, duration: 2})
 }, [])
