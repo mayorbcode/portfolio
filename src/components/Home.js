@@ -8,7 +8,7 @@ const animation = gsap.timeline();
 const Home = (props) => {
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({top: 0, behavior: 'smooth'});
     animation
       .fromTo('.home .svg', {bottom:'3%'}, {delay: 1.2, repeat: -1, ease: 'back', bottom: '10%', yoyo:true, duration: 2})
 }, [])
@@ -24,7 +24,7 @@ const Home = (props) => {
         <img className='selfie' src={me} alt="selfie of patrick"/>
       </div>
       <div className="bottom">
-        <Link to='/about'>Get to know me better!</Link>
+        <Link to='/about'>Learn More!</Link>
         <div className="svg">
         </div>
       </div>

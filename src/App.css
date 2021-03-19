@@ -140,18 +140,20 @@ html, body {
   font-size: 2rem;
   text-align: center;
   max-width: 90vw;
-  color: white;
+  color: black;
   /* margin-top: -25px; */
-  border: 2px solid white;
-  border-radius: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  /* background-color: paleturquoise; */
+  background-color: white;
   padding: 7px 15px;
-  transition: transform 0.5s, color 0.65s, background-color 0.65s;
+  transition: border 0.2s, color 0.4s, background-color 0.4s;
 }
 
 .home .bottom a:hover {
-  transform: scale(1.2);
-  color: black;
-  background-color: white;
+  color: plum;
+  background-color: black;
+  border: 1px solid plum;
 }
 
 .svg {
@@ -232,19 +234,20 @@ html, body {
   text-align: center;
   text-decoration: none;
   font-size: 2rem;
-  color: white;
-  border: 2px solid white;
-  border-radius: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
   padding: 5px 10px;
-  transition: transform 0.5s, color 0.65s, background-color 0.65s;
+  transition: border 0.2s, color 0.4s, background-color 0.4s;
   transition-delay: 0;
   max-width: 90vw;
 }
 
 .about .bottom a:hover, .projects .bottom a:hover {
-  transform: scale(1.2);
-  color: black;
-  background-color: white;
+  color: plum;
+  background-color: black;
+  border: 1px solid plum;
 }
 
 .about .top p {
@@ -407,18 +410,19 @@ html, body {
 .contact .bottom form button {
   margin-top: 10px;
   font-size: 1.5rem;
-  color: white;
-  background: none;
+  color: black;
+  background-color: white;
   border: 1px solid white;
   border-radius: 10px;
   position: relative;
-  transition: color 0.3s, border-color 0.3s;
+  transition: border 0.2s, color 0.4s, background-color 0.4s;
 }
 
 .contact .bottom form button:hover {
   cursor: pointer;
   color: plum;
-  border-color: plum;
+  border: 1px solid plum;
+  background-color: black;
 }
 
 .contact .bottom button:active {
@@ -999,6 +1003,10 @@ html, body {
   .home .top h1 div:nth-child(3) {
     left: 0vw;
     top: 30vw;
+  }
+
+  .app .bottom a {
+    font-size: 6vw;
   }
 }
 
