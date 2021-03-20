@@ -1,16 +1,19 @@
 import React, {useRef} from 'react';
 import { NavLink } from 'react-router-dom';
+impory classnames from 'classnames';
 // import gsap from 'gsap';
 
 
 const Nav = () => {
-  const ham = useRef(null);
+//   const ham = useRef(null);
   const list = useRef(null);
+  const [animate, setAnimate] = useState(false)
   
   const toggleHamburger = () => {
     console.log('i ran');
     if (ham.current !== null && list.current !== null) {
-      ham.current.classList.toggle('animate');
+//       ham.current.classList.toggle('animate');
+      setAnimate(s => !s);
       list.current.classList.toggle('nav-list');
     }
   }
@@ -23,8 +26,9 @@ const Nav = () => {
   return (
     <div className="nav" ref={list}>
       <svg 
-          className="hamburger"
-          ref={ham}
+//           className={`hamburger ${animate ? 'animate' : ''}`}
+          className={classNames('hamburger', {animate})}
+//           ref={ham}
           onClick={toggleHamburger}
           viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path className="top" d="M0 0H500V100H0V0Z" fill="white"/>
