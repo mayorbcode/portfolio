@@ -16,11 +16,19 @@ const App = () => {
     {path: '/projects', name: 'Projects', Component: Projects},
     {path: '/contact', name: 'Contact', Component: Contact}
   ]
+  
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="app">
+    <div className="app" onClick={(event) => {
+      if (navOpen) {
+        if (!navRef.current.contains(event.target)) {
+          setNavOpen(false);
+        }
+      }
+    }}>
       <Router>
-          <Nav />
+          <Nav ref={navRef} open={navOpen} onOpenChanged={setNavOpen} />
               {routes.map(({ path, name, Component }) => {
                 return (
                   <Route key={name} path={path} exact>
