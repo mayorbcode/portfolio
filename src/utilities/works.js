@@ -1,6 +1,6 @@
 import stadiums from '../images/stadiums.png';
 import animeAPI from '../images/anime_API.png';
-import staticWeb from '../images/static_webpage.png';
+import translator from '../images/translator.png';
 import pricing from '../images/interactive_pricing_component.png';
 
 const works = [
@@ -23,10 +23,10 @@ const works = [
     image: pricing,
   },
   {
-    title: 'Static Website',
-    url: 'https://mayorbcode.github.io/static-website/',
-    repo: 'https://github.com/mayorbcode/static-website',
-    image: staticWeb,
+    title: 'Translator',
+    url: 'https://mayorbcode.github.io/translator/',
+    repo: 'https://github.com/mayorbcode/translator',
+    image: translator,
   }
 ]
 

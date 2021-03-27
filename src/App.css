@@ -263,7 +263,10 @@ html, body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  gap: 6vh;
+}
+
+.projects .top, .projects .bottom {
+  margin: 4vh auto;
 }
 
 .projects .top h1 {
